@@ -6,7 +6,7 @@ To run the project on the local server, follow the steps below (or see: https://
 - Launch Apache server and MySQL in xampp.
 - Create the database named 'laravel-crud' (or any other name you like) in the PhPMyAdmin Panel from xampp.
 - Clone the repo to the htdocs folder of xampp.
-- Open the repo in the code editor which provides terminal dealing with php artisan commands (I used Visual Studio for this purpose).
+- Open the repo in the code editor which provides terminal dealing with php artisan commands (I used Visual Studio Code for this purpose).
 - Run 'composer install' command in the terminal (bash mode in VS Code).
 - Run 'npm install' command in the terminal (bash mode in VS Code).
 - Run 'cp .env.example .env' command in the terminal (bash mode in VS Code).
