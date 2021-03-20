@@ -58,7 +58,8 @@ class ProductController extends Controller
      */
     public function show(Product $product)
     {
-        return view('products.show',compact('product'));
+        $prices = $product->prices()->get()->pluck('value');
+        return view('products.show',compact('product','prices'));
     }
 
     /**
