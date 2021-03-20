@@ -1,3 +1,23 @@
+## Running the project locally
+
+Prerequisities: xampp and composer installed, Laravel version 8.
+
+To run the project on the local server, follow the steps below (or see: https://devmarketer.io/learn/setup-laravel-project-cloned-github-com/):
+- Launch Apache server and MySQL in xampp.
+- Create the database named 'laravel-crud' (or any other name you like) in the PhPMyAdmin Panel from xampp.
+- Clone the repo to the htdos folder of xampp.
+- Open the repo in the code editor which provides terminal dealing with php artisan commands (I used Visual Studio for this purpose).
+- Run 'composer install' command in the terminal (bash mode in VS Code).
+- Run 'npm install' command in the terminal (bash mode in VS Code).
+- Run 'cp .env.example .env' command in the terminal (bash mode in VS Code).
+- In the just created .env file change the line 'DB_DATABASE=laravel' to 'DB_DATABASE=laravel-crud'.
+- Run 'php artisan key:generate' command in the terminal (bash mode in VS Code).
+- Run 'php artisan migrate:refresh --seed' command in the terminal (bash mode in VS Code) to seed the static data.
+- The application shall be avaible at http://localhost/laravel-authentication-crud-many-to-many/public/.
+- To login as administrator use the following static test credentials: E-Mail Address: admin@gmail.com, Password: admin.
+
+I used this tutorial to create this project: https://www.youtube.com/playlist?list=PLJetLDY7yKup1wDDkQObuRIzCeXYtpNvN. 
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
 
 <p align="center">
