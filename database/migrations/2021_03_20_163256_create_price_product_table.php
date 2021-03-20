@@ -14,8 +14,8 @@ class CreatePriceProductTable extends Migration
     public function up()
     {
         Schema::create('price_product', function (Blueprint $table) {
-            $table->foreignId('product_id')->constrained();
-            $table->foreignId('price_id')->constrained();
+            $table->foreignId('product_id');//->constrained();
+            $table->foreignId('price_id');//->constrained();
         });
     }
 
