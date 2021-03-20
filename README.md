@@ -1,6 +1,6 @@
 ## Running the project locally
 
-Prerequisities: xampp and composer installed, Laravel version 8.
+Prerequisities: xampp (https://www.apachefriends.org/pl/download.html) and composer (https://getcomposer.org/download/) installed, Laravel version 8 (https://laravel.com/docs/8.x).
 
 To run the project on the local server, follow the steps below (or see: https://devmarketer.io/learn/setup-laravel-project-cloned-github-com/):
 - Launch Apache server and MySQL in xampp.
