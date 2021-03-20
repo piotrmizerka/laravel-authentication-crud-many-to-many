@@ -1,10 +1,12 @@
-@extends('products.layout')
+@extends('layouts.app')
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha/css/bootstrap.css" rel="stylesheet">
 
 @section('content')
     <div class="row">
         <div class="col-lg-12 margin-tb">
             <div class="pull-left">
-                <h2> Show Product</h2>
+                <h3>Details of the chosen product</h3>
             </div>
             <div class="pull-right">
                 <a class="btn btn-primary" href="{{ route('products.index') }}"> Back</a>
