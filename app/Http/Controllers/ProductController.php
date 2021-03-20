@@ -25,8 +25,11 @@ class ProductController extends Controller
      */
     public function create()
     {
+        // saving all prices values to pass to view for selection
+        $prices = \App\Models\Price::all();
+
         //Returning the create view for products
-        return view('products.create');
+        return view('products.create', compact('prices'));
     }
 
     /**
@@ -40,11 +43,19 @@ class ProductController extends Controller
         // input validation
         $request->validate([
             'name' => 'required',
-            'description' => 'required'
+            'description' => 'required',
         ]);
-
+        
+        
         // creation of a new product in the database
-        Product::create($request->all());
+        //$arrayToString = implode(',',$request->input('show_option'));
+        
+        $inputValue = $request->all();
+       // $inputValue['show_option'] = $arrayToString;
+        $inputValue['show_option'] = $request->input('show_option');
+
+
+        Product::create($inputValue);
 
         // redirection with a message
         return redirect()->route('products.index')->with('success','Product created successfully');
@@ -70,7 +81,10 @@ class ProductController extends Controller
      */
     public function edit(Product $product)
     {
-        return view('products.edit',compact('product'));
+        // saving all prices values to pass to view for selection
+        $prices = \App\Models\Price::all();
+
+        return view('products.edit',compact('product','prices'));
     }
 
     /**

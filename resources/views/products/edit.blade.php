@@ -42,6 +42,14 @@
                     <textarea class="form-control" style="height:150px" name="description" placeholder="Description">{{ $product->description }}</textarea>
                 </div>
             </div>
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                <div class="form-group">
+                    <strong>Select available prices:</strong>
+                        @foreach ($prices as $price)
+                            <br><input type="checkbox" name="$price->id">{{ $price->value }} PLN</option>
+                        @endforeach
+                </div>
+            </div>
             <div class="col-xs-12 col-sm-12 col-md-12 text-center">
               <button type="submit" class="btn btn-primary">Edit product</button>
             </div>
