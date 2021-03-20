@@ -4,6 +4,8 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
 
+use function GuzzleHttp\Promise\all;
+
 class ProductSeeder extends Seeder
 {
     /**
@@ -18,6 +20,7 @@ class ProductSeeder extends Seeder
             'description' => '10 year, used'
         ]);
         $product->save();
+        //$product->prices()->attach(\App\Models\Price::inRandomOrder()->take(rand(1,3))->pluck('id')->toArray());
         $product = new \App\Models\Product([
             'name' => 'Skoda Kamiq',
             'description' => '8 year, used'
@@ -68,5 +71,11 @@ class ProductSeeder extends Seeder
             'description' => '10 year, used'
         ]);
         $product->save();
+
+        foreach(\App\Models\Product::all() as $product)
+        {
+            $prices=\App\Models\Price::inRandomOrder()->take(rand(1,5))->pluck('id');
+            $product->prices()->attach($prices);
+        }
     }
 }
